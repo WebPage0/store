@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="https://github.com/sz-games/home/blob/main/G.png?raw=true">
+    <title>BraceletsByLove</title>
+    <meta name="description"  content="Bracelets (:"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    background: rgb(37, 37, 37);
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+    
+    
+</style>
+</head>
+<body>
+
+    <style>
+        .NAV {
+            top: 20px; 
+            position: fixed;
+            width: 98%;
+            height: 50px;
+            background-color: rgba(88, 88, 88, 0.619);
+            border-radius: 15px;
+            left: 50%;
+            transform: translate(-50%, -0%);
+            transition: 0.5s;
+        }
+        .NAV2 {
+            transition: 0.8s;
+            top: 0px; 
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(88, 88, 88, 0.619);
+            border-radius: 0px;
+            left: 50%;
+            transform: translate(-50%, -0%);
+            transition: 0.5s;
+        }
+        .ICON {
+            position: relative;
+            top: 50%;
+            transform: translate(-0%, -50%);
+            float: right;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .tool {
+            position: absolute;
+            height: 20px;
+            background-color: rgb(80, 80, 80);
+            width: 30px;
+            padding: 5px;
+            display: none;
+        }
+        @keyframes scroll {
+            from {
+                top: 20px; 
+                position: fixed;
+                width: 98%;
+                height: 50px;
+                background-color: rgba(88, 88, 88, 0.619);
+                border-radius: 15px;
+                left: 50%;
+                transform: translate(-50%, -0%);
+                transition: 0.5s;
+            }
+            to {
+                transition: 0.5s;
+                top: 0px; 
+                position: fixed;
+                width: 100%;
+                height: 50px;
+                background-color: rgba(88, 88, 88, 0.619);
+                border-radius: 0px;
+                left: 50%;
+                transform: translate(-50%, -0%);
+            }
+        }
+        @keyframes scroll2 {
+            from {
+                transition: 0.5s;
+                top: 0px; 
+                position: fixed;
+                width: 100%;
+                height: 50px;
+                background-color: rgba(88, 88, 88, 0.619);
+                border-radius: 0px;
+                left: 50%;
+                transform: translate(-50%, -0%);
+            }
+            to {
+                top: 20px; 
+                position: fixed;
+                width: 98%;
+                height: 50px;
+                background-color: rgba(88, 88, 88, 0.619);
+                border-radius: 15px;
+                left: 50%;
+                transform: translate(-50%, -0%);
+                transition: 0.5s;
+            }
+        }
+
+    </style>
+
+<!--TOPNAV-->  
+<div class="NAV" id="Nav">
+    <span class="material-icons ICON" style=""  >
+        question_mark
+    </span>
+    <span class="material-icons ICON" style=""  >
+        home
+    </span>
+    <img src="./logoBright.png" style="float: left; margin: 5px;" width="40px" height="40px"/>
+
+    <h1 style="font-size: 20px; position: relative; float: left;  left: 10px; top: 50%; transform: translate(-0%, -100%);">BraceletsByLove</h1>
+
+    
+</div>
+<script>
+
+  var myElement = document.getElementById("Nav"); // Get the element
+  var Isscrolled = false;
+window.addEventListener("scroll", function() { // Add a scroll event listener
+  if (window.pageYOffset > 350) { // Check if the user has scrolled 100 pixels down the page
+    if(Isscrolled===false) {
+    myElement.style.animation = "scroll 0.5s"; // Hide the element
+    myElement.classList.replace('NAV', 'NAV2')
+    Isscrolled = true
+    //console.log("its false")
+    } else {
+      Isscrolled = true
+    }
+  } else  if (window.pageYOffset < 350) {
+    if(Isscrolled===true) {
+      //console.log("its true")
+      myElement.style.animation = "scroll2 0.5s"; // Hide the element
+      myElement.classList.replace('NAV2', 'NAV')
+      Isscrolled=false
+    } else {
+      Isscrolled=false
+    
+    }
+  }
+
+});
+
+</script>
+
+<div id="toolTXT" class="tool" style="right: 15px; top: 35px;">
+    <p style="top: 0; position: absolute; font-size: small;">Hello</p>
+</div>
+
+<div style="position: absolute; height: 1000%; width: 100px;"></div>
+
+</body>
+</html>
