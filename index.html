@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4KE5C5HJK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T4KE5C5HJK');
+    </script>
     <link rel="icon" href="https://github.com/sz-games/home/blob/main/G.png?raw=true">
     <title>BraceletsByLove</title>
     <meta name="description"  content="Bracelets (:"> 
@@ -12,6 +21,7 @@
 body {
     background: rgb(37, 37, 37);
     margin: 0;
+    min-width: 590px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
@@ -28,6 +38,17 @@ body {
             position: fixed;
             width: 98%;
             height: 50px;
+            background-color: rgba(88, 88, 88, 0);
+            border-radius: 15px;
+            left: 50%;
+            transform: translate(-50%, -0%);
+            transition: 0.5s;
+        }
+        .NAVBACKUP {
+            top: 20px; 
+            position: fixed;
+            width: 98%;
+            height: 50px;
             background-color: rgba(88, 88, 88, 0.619);
             border-radius: 15px;
             left: 50%;
@@ -40,7 +61,7 @@ body {
             position: fixed;
             width: 100%;
             height: 50px;
-            background-color: rgba(88, 88, 88, 0.619);
+            background-color: rgba(60, 60, 60, 0.999);
             border-radius: 0px;
             left: 50%;
             transform: translate(-50%, -0%);
@@ -68,7 +89,7 @@ body {
                 position: fixed;
                 width: 98%;
                 height: 50px;
-                background-color: rgba(88, 88, 88, 0.619);
+                background-color: rgba(88, 88, 88, 0);
                 border-radius: 15px;
                 left: 50%;
                 transform: translate(-50%, -0%);
@@ -80,7 +101,7 @@ body {
                 position: fixed;
                 width: 100%;
                 height: 50px;
-                background-color: rgba(88, 88, 88, 0.619);
+                background-color: rgba(60, 60, 60, 0.999);
                 border-radius: 0px;
                 left: 50%;
                 transform: translate(-50%, -0%);
@@ -103,7 +124,7 @@ body {
                 position: fixed;
                 width: 98%;
                 height: 50px;
-                background-color: rgba(88, 88, 88, 0.619);
+                background-color: rgba(88, 88, 88, 0);
                 border-radius: 15px;
                 left: 50%;
                 transform: translate(-50%, -0%);
@@ -111,39 +132,215 @@ body {
             }
         }
 
+        .header {
+            position: relative;
+            z-index: 1;
+            padding: 60px;
+            text-align: center;
+            background: linear-gradient(to bottom right, #bc65ff56, rgba(179, 2, 185, 0.512));
+            color: white;
+            
+            width: auto;
+            font-size: 30px;
+            height: 225px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .PR {
+            border: solid 5px gray;
+            height: 200px;
+            width: 200px;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255); 
+            margin: 20px;
+            /*box-shadow: 0 0 0 10px #c8c8c8 inset; */
+
+        }
+        .PR2 {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            transition: 0.5s;
+            float: left;
+         
+        }
+        .PR2:hover {
+            transform: scale(1.1);
+            border-radius: 15px;
+            
+            background-color: rgb(75, 75, 75);
+        }
+        .BTN {
+            position: relative;
+            border: solid 3px gray;
+            background-color: rgb(57, 57, 57);
+            height: 60px;
+            color: white;
+            border-radius: 15px;
+            width: 60%;
+            left: 50%;
+            font-size: 20px;
+            transform: translate(-50%, 0%);
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .BTN:hover {
+
+            transform: translate(-50%, 0%) scale(1.1) !important;
+        }
+
+        .div9 {
+            overflow: auto;
+            animation: OPEN 0.5s;
+            z-index: 100;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background: rgb(37, 37, 37);
+            display: block !important;
+            top: 0;
+
+        }
+
+        
+
+        @keyframes OPEN {
+            from {
+                transform: scale(0.2);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+            
+        }
+        .TXT3 {
+            font-size: 20px; 
+            position: relative; 
+            float: left;  
+            left: 10px; 
+            top: 50%; 
+            transform: translate(-0%, -100%);
+        }
+        .TXT09 {
+            opacity: 0;
+            animation: Hello 0.5s;
+        }
+
+        @keyframes Hello {
+            from{transform: translate(-0%, -0%); opacity: 1;}
+            to{transform: translate(-0%, -100%); opacity: 0;}
+
+        }
+        .TXT09E {
+            opacity: 0;
+            animation: Hellot 0.5s !important;
+        }
+
+        .TXT09Eu {
+            opacity: 0;
+
+        }
+
+        @keyframes Hellot {
+            from{transform: translate(-0%, -0%); opacity: 1;}
+            to{transform: translate(-0%, 100%); opacity: 0;}
+
+        }
+        .TXT09B {
+            opacity: 1;
+            animation: Hello2 0.5s;
+        }
+
+        @keyframes Hello2 {
+            from{transform: translate(-0%, -100%); opacity: 0;}
+            to{transform: translate(-0%, -0%); opacity: 1;}
+
+
+        }
+
+        .TXT09BR {
+            opacity: 1;
+            animation: HelloP 0.5s !important;
+            transform: translate(-0%, -0%);
+        }
+
+        @keyframes HelloP {
+            from{transform: translate(-0%, 100%); opacity: 0;}
+            to{transform: translate(-0%, -0%); opacity: 1;}
+
+
+        }
     </style>
 
 <!--TOPNAV-->  
-<div class="NAV" id="Nav">
-    <span class="material-icons ICON" style=""  >
+<div class="NAV" id="Nav" style="z-index: 20;">
+    <!--span class="material-icons ICON" style=""  >
         question_mark
-    </span>
+    </span-->
     <span class="material-icons ICON" style=""  >
         home
     </span>
-    <img src="./logoBright.png" style="float: left; margin: 5px;" width="40px" height="40px"/>
 
-    <h1 style="font-size: 20px; position: relative; float: left;  left: 10px; top: 50%; transform: translate(-0%, -100%);">BraceletsByLove</h1>
+    <div>
+        <img id="logo" src="./logoBright.png" style="transition: 0.5s; float: left; margin: 5px;" width="40px" height="40px"/>
+
+        <h1 id="T0" class="TXT3 TXT09Eu" style="">BraceletsByLove</h1>
+    </div>
+    
 
     
 </div>
+<div class="header">
+    <!--img src="https://github.com/sz-games/sz-games.github.io/blob/main/Gh.png?raw=true" style="position: relative; width: 150px; height: 150px;" alt="img"-->
+    <img src="./logoBright.png" style="position: relative; width: 125px; height: 125px;" alt="img">
+    <h1 id="navTitle">BraceletsByLove</h1>
+</div>
 <script>
+    document.getElementById('logo').style.opacity = 0
+  var L = document.getElementById("navTitle"); // Get the element
+  var E = document.getElementById("T0"); // Get the element
 
   var myElement = document.getElementById("Nav"); // Get the element
   var Isscrolled = false;
 window.addEventListener("scroll", function() { // Add a scroll event listener
-  if (window.pageYOffset > 350) { // Check if the user has scrolled 100 pixels down the page
+  if (window.pageYOffset > 200) { // Check if the user has scrolled 100 pixels down the page
     if(Isscrolled===false) {
     myElement.style.animation = "scroll 0.5s"; // Hide the element
+    if(L.classList.contains('TXT09B')) {
+        L.classList.replace('TXT09B', 'TXT09');
+
+    } else {
+        L.classList.add('TXT09');
+
+
+    }
+    document.getElementById('logo').style.opacity = 1
+
+    if(E.classList.contains('TXT09E')) {
+        E.classList.replace('TXT09E', 'TXT09BR');
+    } else if(E.classList.contains('TXT09Eu')) {
+
+        E.classList.replace('TXT09Eu', 'TXT09BR');
+
+    } else {
+        E.classList.add('TXT09BR');
+    }
     myElement.classList.replace('NAV', 'NAV2')
     Isscrolled = true
     //console.log("its false")
     } else {
       Isscrolled = true
     }
-  } else  if (window.pageYOffset < 350) {
+  } else  if (window.pageYOffset < 200) {
     if(Isscrolled===true) {
+    document.getElementById('logo').style.opacity = 0
+
       //console.log("its true")
+      L.classList.replace('TXT09', 'TXT09B');
+      E.classList.replace('TXT09BR', 'TXT09E');
+
       myElement.style.animation = "scroll2 0.5s"; // Hide the element
       myElement.classList.replace('NAV2', 'NAV')
       Isscrolled=false
@@ -155,13 +352,73 @@ window.addEventListener("scroll", function() { // Add a scroll event listener
 
 });
 
+
+
 </script>
 
 <div id="toolTXT" class="tool" style="right: 15px; top: 35px;">
     <p style="top: 0; position: absolute; font-size: small;">Hello</p>
 </div>
+<br>
+<br>
+<button class="BTN" onclick="BTN()" id="Btn" style="
+    
+">
+Order
+</button>
+<br>
+<br>
+<div style="position: relative; height: 200px; width: 100%;">
+   
+        <div id="" style="float: left;" class="PR"> 
+            <img class="PR2" width="200px" height="200px" style="" src="./BR2.png"/>
+        </div>
 
-<div style="position: absolute; height: 1000%; width: 100px;"></div>
 
+        <div id="" style="float: left;" class="PR"> 
+            <img class="PR2" width="200px" height="200px" style="" src="./BR3.png"/>
+        </div>
+
+        <div id="" style="float: left;" class="PR"> 
+            <img class="PR2" width="200px" height="200px" style="" src="./BR4.png"/>
+        </div>
+
+        <div id="" style="float: left;" class="PR"> 
+            <img class="PR2" width="200px" height="200px" style="" src="./BR5.png"/>
+        </div>
+
+        <div id="" style="float: left;" class="PR"> 
+            <img class="PR2" width="200px" height="200px" style="" src="./BR6.png"/>
+        </div>
+
+        <div id="" style="float: left;" class="PR"> 
+            <img class="PR2" width="200px" height="200px" style="" src="./BR8.png"/>
+        </div>
+    
+</div>
+<br>
+<br>
+<br>
+
+
+
+<div style="display: none;" id="DIV">
+    <span class="material-icons" onclick="BTN2()" style="position: fixed; top: 10px; right: 10px; cursor: pointer;"  >
+        close
+    </span>
+    <script src="https://www.cognitoforms.com/f/seamless.js" data-key="HkMsiRY3_0u65wxcl_5U6g" data-form="1"></script>
+</div>
+
+<script>
+    function BTN() {
+        document.getElementById('DIV').classList.add('div9')
+    }
+    function BTN2() {
+        document.getElementById('DIV').classList.remove('div9')
+    }
+</script>
+<br>
+<br>
+<br>
 </body>
 </html>
